@@ -1,0 +1,5 @@
+{
+	// Environment
+	"node": true,
+	"esnext": true
+}
