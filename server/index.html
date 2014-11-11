@@ -1,9 +1,37 @@
 <!doctype html>
 
 <html>
-	<head>Palo Example</head>
-	<link rel="/palo/resources/example-stylesheet/stylesheets/all" href="stylesheet" media="all">
+	<head>
+		<title>Palo Example</title>
+		<link rel="stylesheet" href="/palo/resources/example-package-d/stylesheets/all">
+	</head>
 	<body>
+		<h1>Palo Example</h1>
 		<script src="/palo/startup"></script>
+		<script>
+			if ( Palo ) {
+				Palo.ensure( [ 'example-package-c' ], function ( c ) {
+					console.log( 'example-package-a is loaded, and says:', c.message );
+				} );
+				Palo.ensure( [ 'example-package-b' ], function ( b ) {
+					console.log( 'example-package-b is loaded, and says:', b );
+				} );
+				Palo.ensure( [ 'example-package-a' ], function ( a ) {
+					console.log( 'example-package-a is loaded, and says:', a.toString() );
+				} );
+				Palo.ensure( [ 'example-package-e' ], function ( e ) {
+					console.log( 'example-package-e is loaded, and says:', e );
+				} );
+				Palo.define( 'example-package-g', [ 'jquery' ], {
+					modules: {
+						'.': function ( require, exports, module, global ) {
+							var $ = require( 'jquery' );
+							$( 'body' )
+								.append( '<h1 class="example-package-g">Example Package G</h1>' );
+						}
+					}
+				} );
+			}
+		</script>
 	</body>
 </html>
