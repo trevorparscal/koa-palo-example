@@ -8,5 +8,5 @@
 	"undef": true,
 	"unused": true,
 	"strict": false,
-	"noyield": true,
+	"noyield": true
 }

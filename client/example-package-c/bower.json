@@ -1,0 +1,12 @@
+{
+	"name": "example-package-c",
+	"private": true,
+	"main": [
+		"main.js",
+		"main.css"
+	],
+	"dependencies": {
+		"example-package-a": "^0.1.0",
+		"example-package-b": "^0.1.0"
+	}
+}

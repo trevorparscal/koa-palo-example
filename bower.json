@@ -1,8 +1,9 @@
 {
-	"name": "koa-palo-example",
-	"private": true,
-	"dependencies": {
-		"palo": "^0.1.0",
-		"palo-startup": "^0.1.0"
-	}
+  "name": "koa-palo-example",
+  "private": true,
+  "dependencies": {
+	"palo": "^0.1.0",
+	"palo-startup": "^0.1.0",
+    "jquery": "~2.1.1"
+  }
 }

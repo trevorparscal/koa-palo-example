@@ -1,4 +1,6 @@
 {
+	"extends": "../.jshintrc",
+
 	// Environment
 	"node": true,
 	"esnext": true

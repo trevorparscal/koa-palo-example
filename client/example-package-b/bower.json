@@ -1,0 +1,8 @@
+{
+	"name": "example-package-b",
+	"private": true,
+	"main": "main.js",
+	"dependencies": {
+		"jquery": "~2.0.0"
+	}
+}
