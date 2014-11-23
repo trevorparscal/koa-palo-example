@@ -1,0 +1,21 @@
+{
+	"resources": {
+		"modules": {
+			".": {
+				"file": "main.js",
+				"imports": {
+					"msg": "./message"
+				}
+			},
+			"message": {
+				"file": "message.js",
+				"exports": {
+					"element": "el"
+				}
+			}
+		},
+		"stylesheets": {
+			"all": "main.css"
+		}
+	}
+}
