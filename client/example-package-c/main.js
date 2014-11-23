@@ -1,8 +1,3 @@
-var el = document.createElement( 'h1' );
-
-el.innerHTML = 'Example Package C';
-el.setAttribute( 'class', 'example-package-c' );
-
-document.body.appendChild( el );
+document.body.appendChild( msg.element );
 
 exports.message = 'C';

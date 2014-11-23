@@ -1,0 +1,17 @@
+{
+	"overrides": {
+		"example-package-b": {
+			"resources": {
+				"modules": {
+					".": {
+						"file": "main.js",
+						"imports": {
+							"$": "jquery"
+						},
+						"exports": "msg"
+					}
+				}
+			}
+		}
+	}
+}
