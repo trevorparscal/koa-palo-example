@@ -3,7 +3,8 @@ var koa = require( 'koa' ),
 	route = require( 'koa-route' ),
 	path = require( 'path' ),
 	fs = require( 'co-fs' ),
-	app = module.exports = koa();
+	app = module.exports = koa(),
+	client = path.join( process.cwd(), 'client' );
 
 app
 	.use( require( 'koa-gzip' )() )
@@ -23,7 +24,8 @@ app
 		]
 	} ) )
 	*/
-	.use( mount( '/palo', require( 'koa-palo' )( path.join( process.cwd(), 'client' ) ) ) )
+	.use( mount( '/palo', require( 'koa-palo' )( client, '/client' ) ) )
+	.use( mount( '/client', require( 'koa-static' )( client ) ) )
 	.use( route.get( '/', function *() {
 		this.type = '.html';
 		this.body = yield fs.readFile( './server/index.html' );
